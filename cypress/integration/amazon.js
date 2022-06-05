@@ -5,7 +5,7 @@ const lp =new LoginPage()
 it('LOGIN TEST',function(){
 
     lp.navigate('https://www.amazon.in')
-    lp.enterusername('7009164133')
+    lp.enterusername('backupkeliyebanaya@gmail.com')
     lp.enterpassword("Gauravchi@12345")
 })
 
