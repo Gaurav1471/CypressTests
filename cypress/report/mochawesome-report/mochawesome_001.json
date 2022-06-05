@@ -1,0 +1,144 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-06-05T16:13:07.906Z",
+    "end": "2022-06-05T16:13:45.590Z",
+    "duration": 37684,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a8e5f996-b28d-4f7a-8bfd-b5609a9706e6",
+      "title": "",
+      "fullFile": "cypress/integration/bajaj.js",
+      "file": "cypress/integration/bajaj.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Search Bajaj Finserv Health on google",
+          "fullTitle": "Search Bajaj Finserv Health on google",
+          "timedOut": null,
+          "duration": 10133,
+          "state": "passed",
+          "speed": "slow",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.visit('https://www.google.com');\ncy.get('.gLFyf').type('Bajaj FInserv Health Limited{Enter}');",
+          "err": {},
+          "uuid": "57bdb181-fff0-465e-9581-ea9a23141e1c",
+          "parentUUID": "a8e5f996-b28d-4f7a-8bfd-b5609a9706e6",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "Open Bajaj Finserv Health",
+          "fullTitle": "Open Bajaj Finserv Health",
+          "timedOut": null,
+          "duration": 8235,
+          "state": "passed",
+          "speed": "medium",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.wait(3000);\ncy.get(':nth-child(1) > .g > .jtfYYd > .jGGQ5e > .yuRUbf > a > .TbwUpd > .iUh30').click();",
+          "err": {},
+          "uuid": "21d011a7-0c01-4941-892d-c3fcc1511875",
+          "parentUUID": "a8e5f996-b28d-4f7a-8bfd-b5609a9706e6",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "Search Doctor",
+          "fullTitle": "Search Doctor",
+          "timedOut": null,
+          "duration": 4101,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.get('#searchBarInput').type('Doctor{Enter}');\ncy.wait(3000);\ncy.scrollTo(0, 500);\ncy.get('button').contains('Book Appointment').first().click();",
+          "err": {},
+          "uuid": "f3df9c17-64d5-4cad-a311-7e2b56c3babb",
+          "parentUUID": "a8e5f996-b28d-4f7a-8bfd-b5609a9706e6",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "Select Slot",
+          "fullTitle": "Select Slot",
+          "timedOut": null,
+          "duration": 13017,
+          "state": "passed",
+          "speed": "slow",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.wait(2000);\ncy.get('div[class=slotTimeContainer]').find('span[class=MuiButton-label]').first().then(function (text1) {\n  cy.get('div[class=slotTimeContainer]').find('span[class=MuiButton-label]').first().click();\n  cy.get('[data-testid=\"appointment-time\"]').invoke('text').then(text2 => {\n    expect(text2).to.eq(text1.text());\n  });\n});",
+          "err": {},
+          "uuid": "60886b5d-ad6c-47eb-b3a3-738f86853dd1",
+          "parentUUID": "a8e5f996-b28d-4f7a-8bfd-b5609a9706e6",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "57bdb181-fff0-465e-9581-ea9a23141e1c",
+        "21d011a7-0c01-4941-892d-c3fcc1511875",
+        "f3df9c17-64d5-4cad-a311-7e2b56c3babb",
+        "60886b5d-ad6c-47eb-b3a3-738f86853dd1"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 35486,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report/mochawesome-report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

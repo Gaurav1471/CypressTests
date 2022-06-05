@@ -1,0 +1,144 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-06-05T16:12:12.146Z",
+    "end": "2022-06-05T16:12:59.710Z",
+    "duration": 47564,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f2c7828c-650f-428c-b02c-91860bade866",
+      "title": "",
+      "fullFile": "cypress/integration/amazon.js",
+      "file": "cypress/integration/amazon.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "LOGIN TEST",
+          "fullTitle": "LOGIN TEST",
+          "timedOut": null,
+          "duration": 10331,
+          "state": "passed",
+          "speed": "slow",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "lp.navigate('https://www.amazon.in');\nlp.enterusername('7009164133');\nlp.enterpassword(\"Gauravchi@12345\");",
+          "err": {},
+          "uuid": "c8454a2c-73ba-45c9-ae0e-eb0268147dea",
+          "parentUUID": "f2c7828c-650f-428c-b02c-91860bade866",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "Drop Down",
+          "fullTitle": "Drop Down",
+          "timedOut": null,
+          "duration": 17534,
+          "state": "passed",
+          "speed": "slow",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.wait(3000);\ncy.get('#twotabsearchtextbox').click().get('#searchDropdownBox').select('Electronics', {\n  force: true\n});\ncy.get('#twotabsearchtextbox').type('Iphone 12{enter}');\ncy.get('span').contains('RESULTS').should('exist');\ncy.get('a[class=\\'a-link-normal s-underline-text s-underline-link-text s-link-style a-text-normal').first().contains('Apple iPhone 12').should('exist');",
+          "err": {},
+          "uuid": "ff84b051-66b2-4977-8921-fa1b5b12bbd3",
+          "parentUUID": "f2c7828c-650f-428c-b02c-91860bade866",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "Selecting First Result",
+          "fullTitle": "Selecting First Result",
+          "timedOut": null,
+          "duration": 9696,
+          "state": "passed",
+          "speed": "medium",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.get('a[class=\\'a-link-normal s-underline-text s-underline-link-text s-link-style a-text-normal').first().invoke('removeAttr', 'target').click();",
+          "err": {},
+          "uuid": "345348c6-fa4a-4ed7-aa9d-2dd19b9d5660",
+          "parentUUID": "f2c7828c-650f-428c-b02c-91860bade866",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "Add To Cart Button",
+          "fullTitle": "Add To Cart Button",
+          "timedOut": null,
+          "duration": 6824,
+          "state": "passed",
+          "speed": "medium",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.get('#add-to-cart-button').click();\ncy.get('#a-autoid-0 > .a-button-inner > .a-button-input').click();\ncy.get('.a-truncate-cut').contains('iPhone 12').should('exist');",
+          "err": {},
+          "uuid": "b19ed749-43a1-4ce0-ab48-a76717222a22",
+          "parentUUID": "f2c7828c-650f-428c-b02c-91860bade866",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "c8454a2c-73ba-45c9-ae0e-eb0268147dea",
+        "ff84b051-66b2-4977-8921-fa1b5b12bbd3",
+        "345348c6-fa4a-4ed7-aa9d-2dd19b9d5660",
+        "b19ed749-43a1-4ce0-ab48-a76717222a22"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 44385,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report/mochawesome-report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
