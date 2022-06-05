@@ -16,7 +16,7 @@ let mailDetails = {
     text: 'Node.js testing mail',
     attachments: [
         {
-            filename: 'emailable-report.html',
+            filename: 'output.html',
             path: __dirname + '/report/output.html'
         }
     ]
